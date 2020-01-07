@@ -18,4 +18,16 @@ export class AppComponent {
     // Feature 2 Meta.
     this.meta.addTag({name: 'site', content: 'my demo site'});
   }
+
+  go() {
+    this.location.go('');
+  }
+
+  goBack() {
+    this.location.back();
+  }
+
+  goFowrd() {
+    this.location.forward();
+  }
 }
