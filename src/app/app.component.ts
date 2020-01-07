@@ -7,12 +7,13 @@ import {DOCUMENT, Location} from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   // Feature 3 interpolation : replace {{}}
-  interpolation: ['[[', ']]']
+  interpolation: ['((', '))']
 })
 export class AppComponent {
   name = 'angular-features';
+  value = 2;
 
-  constructor(@Inject(DOCUMENT)private doc: Document,
+  constructor(@Inject(DOCUMENT) private doc: Document,
               private title: Title,
               private  meta: Meta,
               private location: Location) {
