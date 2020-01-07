@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {Meta, Title} from '@angular/platform-browser';
-import {Location} from '@angular/common';
+import {DOCUMENT, Location} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +12,16 @@ import {Location} from '@angular/common';
 export class AppComponent {
   name = 'angular-features';
 
-  constructor(private title: Title, private  meta: Meta, private location: Location) {
+  constructor(@Inject(DOCUMENT)private doc: Document,
+              private title: Title,
+              private  meta: Meta,
+              private location: Location) {
     // Feature 1 Title.
     this.title.setTitle('wow! I have set title.');
     // Feature 2 Meta.
     this.meta.addTag({name: 'site', content: 'my demo site'});
+
+    console.log(this.doc);
   }
 
   go() {
