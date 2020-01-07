@@ -22,7 +22,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-features');
   });
 
-  it('should render title', () => {
+  it('should render name', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
